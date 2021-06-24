@@ -10,6 +10,7 @@
     <a href="{{ route('comics.index') }}">Torna alla home</a>
 
     <ul>
+    
         <li>ID: {{ $comic->id }}</li>
         <li>TITOLO: {{ $comic->title }}</li>
         <li>DESCRIZIONE: {{ $comic->description }}</li>

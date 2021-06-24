@@ -56,7 +56,8 @@ class ComicsController extends Controller
      */
     public function show(Comic $comic)
     {
-        dump($comic->id);
+        //$singleUser = User::find($user);
+        
         return view('comics.show' , [
             "comic" => $comic
         ]);
