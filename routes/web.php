@@ -17,6 +17,8 @@ Route::get('/', function () {
     return redirect()-> route('comics.index');
 });
 
+//risorsa : comics
+
 Route::get('/comics', "ComicsController@index")->name("comics.index");
 
 
@@ -25,3 +27,9 @@ Route::post("/comics", "ComicsController@store")->name("comics.store");
 Route::get("/comics/create", "ComicsController@create")->name("comics.create");
 
 Route::get('/comics/{comic}', "ComicsController@show")->name("comics.show");
+
+Route::match(["PUT", "PATCH"], "/comics/{comic}", "ComicsController@update")->name("comics.update");
+
+Route::delete("/comics/{comic}", "ComicsController@destroy")->name("comics.destroy");
+
+Route::get('/comics/{comic}/edit', "ComicsController@edit")->name("comics.edit");

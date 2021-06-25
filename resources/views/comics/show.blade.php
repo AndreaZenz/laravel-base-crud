@@ -10,7 +10,7 @@
     <a href="{{ route('comics.index') }}">Torna alla home</a>
 
     <ul>
-    
+
         <li>ID: {{ $comic->id }}</li>
         <li>TITOLO: {{ $comic->title }}</li>
         <li>DESCRIZIONE: {{ $comic->description }}</li>
@@ -20,6 +20,6 @@
         <li>DATA SCONTO: {{ $comic->sale_date }}</li>
         <li>TIPO: {{ $comic->type }}</li>
     </ul>
-
+    <script src={{asset('js/app.js')}}></script>
 </body>
 </html>

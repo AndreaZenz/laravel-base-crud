@@ -33,5 +33,6 @@
 
         <input type="submit" value="Invia">
     </form>
+    <script src={{asset('js/app.js')}}></script>
 </body>
 </html>

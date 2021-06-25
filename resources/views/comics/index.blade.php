@@ -32,11 +32,15 @@
                 <td>{{ $comic->series }}</td>
                 <td>{{ $comic->sale_date}}</td>
                 <td>{{ $comic->type }}</td>
-                <td><a href="{{ route('comics.show', $comic->id) }}">Dettagli...</a></td>
+                <td><a href="{{ route('comics.show', $comic->id) }}">Dettagli...</a> | <a href="{{ route('comics.edit', $comic->id) }}">Modifica</a>@include('partials.deleteBtn', ["id"=> $comic->id])</td>
+                
+
+                
             </tr>
             @endforeach
         </tbody>
 
     </table>
+    <script src={{asset('js/app.js')}}></script>
 </body>
 </html>
